@@ -1,0 +1,789 @@
+﻿<!DOCTYPE html>
+<html>
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="Home.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>TF</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>TFEC</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+        <div class="collapse navbar-collapse pull-left">        
+          <img src="dist\img\TFEC_W.PNG" alt="臺灣基金電商">         
+        </div><!-- /.navbar-collapse -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+          <li>
+            <div class="collapse navbar-collapse pull-left" id="Div1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Text3" placeholder="搜尋基金商品" style="border-radius:3px;" >
+                        <button class="btn btn-primary no-border" type="button" onclick="javascript: window.location.href = 'Home_Search.html'; return false;">
+                           <i class="fa fa-search"></i>
+                        </button>                
+                    </div>
+                </form>
+              </div><!-- /.navbar-collapse -->
+          </li>
+                <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-sign-in"></i><span class="hidden-xs"> 登入</span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="small-box">
+                <!-- /.login-logo -->
+                <div class="login-box-body">
+                    <p class="login-box-msg">請輸入帳號密碼</p>
+                    <form action="Home_Login.html" method="post">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="帳號">
+                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" placeholder="密碼">
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5" >                              
+                                <button type="submit" class="btn btn-warning btn-block btn-flat">加入會員</button>
+                            </div>
+                            <div class="col-xs-4 pull-right" >
+                                <button type="submit" class="btn btn-danger btn-block btn-flat">登入</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
+                    <div class="social-auth-links text-center">
+                        <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> 使用 Facebook 帳號登入 </a>
+                    </div>
+                    <!-- /.social-auth-links -->
+                    <a href="#">忘記密碼</a><br>
+                    <!--<a href="register.html" class="text-center">我要開戶</a>-->
+                </div>
+                <!-- /.login-box-body -->
+            </div>
+            <!-- /.login-box -->
+            </div>
+          </li>
+         <!-- Notifications: style can be found in dropdown.less -->
+<!--          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+          </li>-->
+          <!-- Tasks: style can be found in dropdown.less -->
+<!--          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger"></span>
+            </a>
+          </li>-->
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="Home.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>TF</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>TFEC</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <!--        <span class="sr-only">臺灣基金電商Toggle navigation</span>    -->
+                    <span style="font-family: 'Microsoft JhengHei'; font-size: 18px; align-content: center; padding-left: 50px;">臺灣基金電商</span>
+                </a>
+                <div class="navbar-custom-menu">
+
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-sign-in"></i><span class="hidden-xs">登入</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="login-box">
+                                    <!-- /.login-logo -->
+                                    <div class="login-box-body">
+                                        <p class="login-box-msg">請輸入帳號密碼</p>
+                                        <form action="Home_Login.html" method="post">
+                                            <div class="form-group has-feedback">
+                                                <input type="text" class="form-control" placeholder="帳號">
+                                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <input type="password" class="form-control" placeholder="密碼">
+                                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <button type="submit" class="btn btn-warning btn-block btn-flat">登入</button>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                        </form>
+                                        <div class="social-auth-links text-center">
+                                            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i>使用 Facebook 帳號登入 </a>
+                                        </div>
+                                        <!-- /.social-auth-links -->
+                                        <a href="#">忘記密碼</a><br>
+                                        <a href="register.html" class="text-center">我要開戶</a>
+                                    </div>
+                                    <!-- /.login-box-body -->
+                                </div>
+                                <!-- /.login-box -->
+                            </div>
+                        </li>
+
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-warning"></span>
+                            </a>
+                        </li>
+                        <!-- Tasks: style can be found in dropdown.less -->
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-flag-o"></i>
+                                <span class="label label-danger"></span>
+                            </a>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="基金搜尋...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <!--        <li class="header"></li>-->
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-book"></i><span>新手上路</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="OnLineHelpPage1.html"><i class="fa fa-circle-o text-aqua"></i>申轉贖流程</a></li>
+                            <li><a href="OnLineHelpPage2.html"><i class="fa fa-circle-o text-aqua"></i>定期定額流程</a></li>
+                            <li><a href="OnLineHelpPage3.html"><i class="fa fa-circle-o text-aqua"></i>交易取消說明</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>繳款方式查詢</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>停損停利通知</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>淨值通知</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>基金小百科</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-edit"></i><span>我要開戶</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>開戶流程說明</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>線上開戶</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i>開戶文件清單</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i>開戶進度查詢</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>開戶Q&A</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-bar-chart"></i><span>大數據</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="BigData_MainStock.html"><i class="fa fa-circle-o text-green"></i>全球主要指數</a></li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i>基金統計數據<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="BigData_Statistics_Domestic.html"><i class="fa fa-circle-o"></i>境內基金</a></li>
+                                    <li><a href="BigData_Statistics_offshore.html"><i class="fa fa-circle-o"></i>境外基金</a></li>
+                                    <li><a href="BigData_Statistics_Domestic_Fix.html"><i class="fa fa-circle-o"></i>境內基金定期額</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="BigData_TreasureMap.html"><i class="fa fa-circle-o text-green"></i>投資藏寶圖</a></li>
+                            <li><a href="BigData_Top10_offshore.html"><i class="fa fa-circle-o text-green"></i>基金龍虎榜</a></li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i>境內基金<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="List_Domestic.html"><i class="fa fa-circle-o"></i>基金公司</a></li>
+                                    <li><a href="BigData_RankList_Domestic.html"><i class="fa fa-circle-o"></i>績效排名</a></li>
+                                    <li><a href="Adv_Search_Domestic.html"><i class="fa fa-circle-o"></i>基金篩選器</a></li>
+                                    <li><a href="BigData_4433_Domestic.html"><i class="fa fa-circle-o"></i>四四三三法則</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i>境外基金<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="List_offshore.html"><i class="fa fa-circle-o"></i>基金公司</a></li>
+                                    <li><a href="BigData_RankList_offshore.html"><i class="fa fa-circle-o"></i>績效排名</a></li>
+                                    <li><a href="Adv_Search_offshore.html"><i class="fa fa-circle-o"></i>基金篩選器</a></li>
+                                    <li><a href="BigData_4433_offshore.html"><i class="fa fa-circle-o"></i>四四三三法則</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i>多空判斷分數<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="BigData_BullBear.html"><i class="fa fa-circle-o"></i>總表</a></li>
+                                    <li><a href="BigData_BullBear_Area.html"><i class="fa fa-circle-o"></i>區域</a></li>
+                                    <li><a href="BigData_BullBear_Country.html"><i class="fa fa-circle-o"></i>單一國家</a></li>
+                                    <li><a href="BigData_BullBear_Business.html"><i class="fa fa-circle-o"></i>行業</a></li>
+                                    <li><a href="BigData_BullBear_Bond.html"><i class="fa fa-circle-o"></i>債券</a></li>
+                                    <li><a href="BigData_BullBear_Ex.html"><i class="fa fa-circle-o"></i>匯率</a></li>
+                                    <li><a href="BigData_BullBear_Class.html"><i class="fa fa-circle-o"></i>商品</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-circle-o"></i>基金新聞<i class="fa fa-angle-left pull-right"></i></a>
+                                <ul class="treeview-menu">
+                                    <li><a href="NewsCenter.html"><i class="fa fa-circle-o"></i>新聞中心</a></li>
+                                    <li><a href="NewsCenter_world_fin.html"><i class="fa fa-circle-o"></i>國際財經</a></li>
+                                    <li><a href="NewsCenter_Fund_Domestic.html"><i class="fa fa-circle-o"></i>境內基金</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="Calendar.html"><i class="fa fa-circle-o text-green"></i>基金休市行事曆</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-shopping-cart"></i><span>基金交易</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>單筆申購</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>定期定額</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>日日扣</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>定期不定額</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>轉換</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>贖回</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-red"></i>取消</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-coffee"></i><span>會員服務</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i>基金小管家</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i>常見問答</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i>聯絡我們</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i>定期不定額</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-rss-square"></i><span>基金公告</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o text-green"></i>基金配息</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-green"></i>基金大事件</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-green"></i>基金休市行事曆</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-green"></i>新基金募集</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>線上開戶－步驟２</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+                    <li><a href="#">線上開戶</a></li>
+                    <li class="active">步驟２</li>
+                </ol>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="box box-info">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">基本資料</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <!-- form start -->
+                            <form class="form-horizontal">
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">身分證字號 *</label>
+                                        <div class="col-xs-3 input-group">
+                                            <span class="input-group-addon"><i class="fa fa-barcode"></i></span>
+                                            <input type="text" readonly="" class="form-control" id="inputID" value="A123456789">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">姓名 *</label>
+                                        <div class="col-xs-3  input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input type="text" class="form-control" id="inputName" placeholder="姓名">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                                                            
+                                        <label class="col-sm-2 control-label">出生日期 *</label>
+                                        <div class='input-group date col-xs-3' id='datepicker1' >
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                            <input type='text' class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">性別 *</label>
+                                        <div class="col-xs-2  input-group">
+                                            <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
+                                            <select class="form-control">
+                                                <option>請選擇</option>
+                                                <option>男</option>
+                                                <option>女</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">行動電話 *</label>
+                                        <div class="col-xs-3  input-group">
+                                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                            <input type="text" class="form-control" id="Text1" data-inputmask="'mask': ['9999-999-999']" data-mask="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">聯絡電話 *</label>
+                                        <div class="col-xs-3  input-group">
+                                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                            <input type="text" class="form-control" id="Text2" data-inputmask='"mask": "(99) 9999-9999"' data-mask="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">電子郵件 *</label>
+                                        <div class="col-xs-3 input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                            <input type="email" class="form-control" placeholder="請輸入電子郵件">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">戶籍地址 *</label>
+                                        <div class="col-xs-3 input-group">
+                                            <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                                            <select class="form-control select2">
+                                                <option>請選擇縣市</option>
+                                                <option>臺北市</option>
+                                                <option>基隆市</option>
+                                                <option>新北市</option>
+                                                <option>新竹市</option>
+                                                <option>新竹線</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">通訊地址 *</label>
+                                        <div class="col-xs-3 input-group">
+                                            <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                                            <input type="text" class="form-control" id="Text5" placeholder="name@gmail.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box box-info">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">贖回帳戶資料</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">臺幣帳戶</label>
+                                                    <select class="form-control select2" style="width: 100%;">
+                                                        <option selected="selected">Alabama</option>
+                                                        <option>Alaska</option>
+                                                        <option>California</option>
+                                                        <option>Delaware</option>
+                                                        <option>Tennessee</option>
+                                                        <option>Texas</option>
+                                                        <option>Washington</option>
+                                                    </select>
+                                                </div>
+                                                <!-- /.form-group -->
+                                                <div class="form-group">
+                                                    <label>外幣帳戶</label>
+                                                    <select class="form-control select2" style="width: 100%;">
+                                                        <option selected="selected">Alabama</option>
+                                                        <option>Alaska</option>
+                                                        <option>California</option>
+                                                        <option>Delaware</option>
+                                                        <option>Tennessee</option>
+                                                        <option>Texas</option>
+                                                        <option>Washington</option>
+                                                    </select>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
+                                            <!-- /.col -->
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>臺幣帳戶</label>
+                                                    <select class="form-control select2" style="width: 100%;">
+                                                        <option selected="selected">Alabama</option>
+                                                        <option>Alaska</option>
+                                                        <option>California</option>
+                                                        <option>Delaware</option>
+                                                        <option>Tennessee</option>
+                                                        <option>Texas</option>
+                                                        <option>Washington</option>
+                                                    </select>
+                                                </div>
+                                                <!-- /.form-group -->
+                                                <div class="form-group">
+                                                    <label>外幣帳戶</label>
+                                                    <select class="form-control select2" style="width: 100%;">
+                                                        <option selected="selected">Alabama</option>
+                                                        <option>Alaska</option>
+                                                        <option>California</option>
+                                                        <option>Delaware</option>
+                                                        <option>Tennessee</option>
+                                                        <option>Texas</option>
+                                                        <option>Washington</option>
+                                                    </select>
+                                                </div>
+                                                <!-- /.form-group -->
+                                            </div>
+                                            <!-- /.col -->
+                                        </div>
+                                        </div>
+                                    </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-default">Cancel</button>
+                                    <button type="submit" class="btn btn-info pull-right">Sign in</button>
+                                </div>
+                                <!-- /.box-footer -->
+                            </form>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+       
+            </div>
+            <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+     
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-user bg-yellow"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                    <p>New phone +1(800)555-1234</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                    <p>nora@example.com</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                                    <p>Execution time 5 seconds</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Custom Template Design
+                   
+                                    <span class="label label-danger pull-right">70%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Update Resume
+                   
+                                    <span class="label label-success pull-right">95%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Laravel Integration
+                   
+                                    <span class="label label-warning pull-right">50%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <h4 class="control-sidebar-subheading">Back End Framework
+                   
+                                    <span class="label label-primary pull-right">68%</span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+                 
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Some information about this general settings option
+               
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Allow mail redirect
+                 
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Other sets of options are available
+               
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Expose author name in posts
+                 
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Allow the user to show his name in blog posts
+               
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Show me as online
+                 
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Turn off notifications
+                 
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Delete chat history
+                 
+                                <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Select2 -->
+    <script src="plugins/select2/select2.full.min.js"></script>
+    <!-- InputMask -->
+    <script src="plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <!-- date-range-picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- date-picker -->
+    <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="plugins/datepicker/locales/bootstrap-datepicker.zh-TW.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- SlimScroll 1.3.0 -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="plugins/iCheck/icheck.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- Page script -->
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $(".select2").select2();
+            //Datemask dd/mm/yyyy
+            $("#datemask").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
+            //Datemask2 mm/dd/yyyy
+            $("#datemask2").inputmask("mm/dd/yyyy", { "placeholder": "mm/dd/yyyy" });
+            //Money Euro
+            $("[data-mask]").inputmask();
+            //Date picker
+            $('#datepicker1').datepicker({
+                language: "zh-TW",
+                format: "yyyy/mm/dd"
+            });
+            //Date range picker
+            $('#reservation').daterangepicker();
+            //Date range picker with time picker
+            $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' });
+            //Date range as a button
+            $('#daterange-btn').daterangepicker(
+                {
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment()
+                },
+            function (start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+            );
+
+            //iCheck for checkbox and radio inputs
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            });
+            //Red color scheme for iCheck
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            });
+            //Flat red color scheme for iCheck
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
+
+            //Colorpicker
+            $(".my-colorpicker1").colorpicker();
+            //color picker with addon
+            $(".my-colorpicker2").colorpicker();
+
+            //Timepicker
+            $(".timepicker").timepicker({
+                showInputs: false
+            });
+        });
+    </script>
+</body>
+</html>

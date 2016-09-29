@@ -1,0 +1,770 @@
+﻿<!DOCTYPE html>
+<html>
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="Home.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>TF</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>TFEC</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+        <div class="collapse navbar-collapse pull-left">        
+          <img src="dist\img\TFEC_W.PNG" alt="臺灣基金電商">         
+        </div><!-- /.navbar-collapse -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+          <li>
+            <div class="collapse navbar-collapse pull-left" id="Div1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Text1" placeholder="搜尋基金商品" style="border-radius:3px;" >
+                        <button class="btn btn-primary no-border" type="button" onclick="javascript: window.location.href = 'Home_Search.html'; return false;">
+                           <i class="fa fa-search"></i>
+                        </button>                
+                    </div>
+                </form>
+              </div><!-- /.navbar-collapse -->
+          </li>
+                <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-sign-in"></i><span class="hidden-xs"> 登入</span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="small-box">
+                <!-- /.login-logo -->
+                <div class="login-box-body">
+                    <p class="login-box-msg">請輸入帳號密碼</p>
+                    <form action="Home_Login.html" method="post">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="帳號">
+                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" placeholder="密碼">
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5" >                              
+                                <button type="submit" class="btn btn-warning btn-block btn-flat">加入會員</button>
+                            </div>
+                            <div class="col-xs-4 pull-right" >
+                                <button type="submit" class="btn btn-danger btn-block btn-flat">登入</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
+                    <div class="social-auth-links text-center">
+                        <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> 使用 Facebook 帳號登入 </a>
+                    </div>
+                    <!-- /.social-auth-links -->
+                    <a href="#">忘記密碼</a><br>
+                    <!--<a href="register.html" class="text-center">我要開戶</a>-->
+                </div>
+                <!-- /.login-box-body -->
+            </div>
+            <!-- /.login-box -->
+            </div>
+          </li>
+         <!-- Notifications: style can be found in dropdown.less -->
+<!--          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+          </li>-->
+          <!-- Tasks: style can be found in dropdown.less -->
+<!--          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger"></span>
+            </a>
+          </li>-->
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="Home.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>TF</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>TFEC</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">8</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有 8 個通知</li>
+               <li class="footer"><a href="#">檢視全部</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">8</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有 8 個代辦事項</li>
+              <li class="footer">
+                <a href="#">檢視全部</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-user"></i><span class="hidden-xs">莊 先生 您好!</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <p>
+                  最近登入時間 2015/08/08 08:08:08
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">基金交易</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">帳務管理</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">觀察名單</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">會員資料</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">登出</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="基金搜尋...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">　</li>
+        <li class="treeview active">
+          <a href="#"><i class="fa fa-book"></i><span> 新手上路</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="OnLineHelpPage1.html"><i class="fa fa-circle-o"></i> 申轉贖流程說明</a></li>
+            <li><a href="OnLineHelpPage2.html"><i class="fa fa-circle-o"></i> 定期定額流程說明</a></li>
+            <li class="OnLineHelpPage3.html"><a href="#"><i class="fa fa-circle-o"></i> 交易取消說明</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 繳款方式查詢</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 停損停利通知通知</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金小百科</a></li>
+          </ul>
+        </li>
+       <li class="treeview">
+          <a href="#"><i class="fa fa-edit"></i><span> 我要開戶</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> 開戶流程說明</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 線上開戶</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 開戶文件清單</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 開戶進度查詢</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 開戶Q&A</a></li>            
+          </ul>
+        </li>
+       <li class="treeview">
+          <a href="#"><i class="fa fa-bar-chart"></i><span> 基金大數據</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金觀測站</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金分佈圖</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金評等</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 進階搜尋</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金統計數據</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金新聞</a></li>                          
+          </ul>
+        </li>
+       <li class="treeview">
+          <a href="#"><i class="fa fa-shopping-cart"></i><span> 基金交易</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> 單筆申購</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 定期定額</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 日日扣</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 定期不定額</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 轉換</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 贖回</a></li>                          
+            <li><a href="#"><i class="fa fa-circle-o"></i> 取消</a></li>                          
+          </ul>
+        </li>
+       <li class="treeview">
+          <a href="#"><i class="fa fa-coffee"></i><span> 會員服務</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金小管家</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 常見問答</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 聯絡我們</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 定期不定額</a></li>
+          </ul>
+        </li>
+       <li class="treeview">
+          <a href="#"><i class="fa fa-rss-square"></i><span> 基金公告</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金配息</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金大事件</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 基金休市行事曆</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> 新基金募集</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        線上開戶－步驟１
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">我要開戶</li>
+      </ol>
+    </section> 
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+            <div class="col-md-10">
+              <div class="nav-tabs-custom">
+                <div class="tab-content">
+                    <div class="box-header bg-yellow text-center">
+                        <h3 class="box-title">網際網路交易條款</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body" >
+                        <p>申購人(以下簡稱甲方)，為中菲電腦股份有限公司（以下簡稱「乙方」）所提供之電子交易服務，進行乙方經主管機關核准銷售之境外基金（基金明細詳如乙方網站所示）之申購、買回與轉換等交易，雙方同意簽訂本境外基金電子交易開戶約定書，條款如下：</p>
+                        <ol style="list-style-type:cjk-ideographic;" >
+                            <li>定義
+                                <ol type="1">
+                                    <li>「電子交易服務」：指乙方依本約定書所定之方式，經乙方電子交易系統所提供甲方交易委託、相關資訊及相關應用程式之服務。</li>
+                                    <li>「電子交易委託」：指透過電子交易型態進行申購（包含單筆及定期定額）、轉換、買回乙方基金或相關交易之任何委託。</li>
+                                    <li>「登入帳號及密碼」：指為執行交易及查詢個人交易之相關資訊，使用於乙方電子交易服務系統之使用者識別方式。</li>
+                                    <li>「電子交易流程」：指甲方可至乙方網站「最新消息」及「開戶與交易」，取得公告事項、最新訊息及基金交易之流程。</li>
+                                    <li>「交易帳戶」：指甲方依本約定書第二條所開立並維持之銀行帳戶。</li>
+                                    <li>「營業日」：指乙方配合主管機關所訂定之交易有效工作日。</li>
+                                </ol>
+                            </li>
+                            <li>受理開戶程序
+                                <ol type="1">
+                                    <li>甲方簽署本約定書時，應核對國民身份證、居留證、護照或其他身分證明文件正本或法人登記證明文件，並簽署本約定書。</li>
+                                    <li>甲方於辦理開戶時，須事先以書面指定以其甲方名義開立之銀行帳戶以作為進行電子交易委託之往來銀行帳戶，將來請求買回時亦僅得就所指定之帳戶以甲方為受款人支付買回價金。</li>
+                                    <li>如甲方指定之交易帳戶有變更時，甲方應事前以書面加蓋原留印鑑後通知乙方，乙方於接獲交易帳戶變更申請之通知前，就已執行交易之扣款或付款仍以原指定帳戶為準。</li>
+                                </ol>
+                           </li>
+                           <li>交易指示、相關交易費用及計價基準
+                                <ol type="1">
+                                    <li>甲方申請電子交易服務，於取得使用權限後，須甲方親自使用專屬密碼，通過身分驗證後始得進行交易指示。甲方有義務妥善保管該密碼。</li>
+                                    <li>甲方進行電子交易委託前應詳閱並遵守乙方於網站「開戶與交易」及「最新消息」項下「基金公佈欄」中有關電子交易流程、最新通知及公告事項。系統狀況將於官網「安全性說明」公告之；乙方亦應隨時公佈最新之電子交易相關流程於其電子交易服務系統。</li>
+                                    <li>甲方同意使用電子交易方式之交易受理時間應依乙方所訂之電子交易委託時間為準，如逾交易時間或適逢例假日，則視為次一營業日之交易指示。</li>
+                                    <li>相關交易費用及計價基準
+                                        <ol type="i">
+                                            <li>單筆申購手續費如不足新台幣100元時，乙方將收取新台幣100元。甲方若辦理定期定額申購需於指定扣款日前一營業日下午3:30前將(首次)作業手續費100元(續次作業手續費為50元)及定期定額款項存入約定之扣款銀行帳戶。此外，若甲方申請轉換交易需扣除應繳之轉換手續費新台幣300元，該筆款項會從客戶所約定的銀行帳號中扣除，如金額不足則該筆轉換交易就不會成交。</li>
+                                            <li>甲方以電子交易委託方式申購乙方所代理或銷售境外基金之股份或單位數時，應俟乙方確認其申購款項已匯至境外基金機構指定之帳戶後始完成申購手續。乙方將依境外基金公開說明書所定之基金淨值計算日，計算甲方之基金單位數。</li>
+                                            <li>甲方請求買回乙方所代理或銷售境外基金之單位數時，甲方應就該境外基金公開說明書或投資人須知所定每營業日截止時間內向乙方提出並送達買回之請求。境外基金機構將依境外基金公開說明書或投資人須知所定之買回給付時間內計算甲方之買回價格，並將買回價金扣除應計之費用、郵費或買回費用等將買回價金匯入甲方之交易帳戶。甲方申請基金轉換時，則以上述買回價金扣除相關費用後之金額計算其轉換基金之單位數。</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>交易指示之執行與確認
+                                <p>甲方使用乙方電子交易服務系統時，如有下述情形，應立即通知乙方，並配合辦理相關措施：</p>
+                                <ol type="1">
+                                    <li>於乙方營業日二十四小時內，甲方未收到該電子交易委託回報。</li>
+                                    <li>甲方已收到該電子交易委託回報或已執行之確認通知，但非甲方所作之指示或彼此歧異。</li>
+                                    <li>甲方得知其使用者密碼被他人盜用等情形。</li>
+                                    <li>其他有關電子交易委託所生之問題。</li>
+                                </ol>
+                            </li>
+                            <li>交易限制
+                                <p>除法令變更外，甲方每日電子交易之申購或買回金額均各以相當於新台幣五百萬元或等值外幣為上限；但甲方為法人或其他機構時，上述申購或買回金額之上限均各為相當於新台幣二千萬元或等值外幣，其中買回限額之計算，係以甲方為電子交易委託前最新基金公告之境外基金淨值及匯率為準；如甲方違反前述金額限制，乙方將不予受理。</p>
+                            </li>
+                            <li>密碼
+                                <p>甲方應妥善保管及使用密碼，並對於使用交易密碼經由乙方電子交易系統所作之一切交易及資料變更等行為負責，但乙方有故意或重大過失致甲方之密碼外洩為第三人所冒用者，不在此限。</p>
+                            </li>                  
+                            <li>資料之通知與送達
+                                <ol type="1">
+                                    <li>所有通知事項，依乙方系列基金受益人名簿記載之甲方住所、營業處所或通訊地址，經由郵寄或電子郵件方式為之。</li>
+                                    <li>前項通知之送達日如下：
+                                        <ol style="list-style-type:square"> 
+                                            <li>經由郵寄方式者，以郵寄日之次一營業日為送達日。</li>
+                                            <li>經由電子郵件方式者，以通知日為送達日。</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>  
+                            <li>甲方資料之處理與保護
+                                <p>甲方同意乙方得依電腦處理個人資料保護法及相關法令之規定，依其營業目的及為甲方提供服務之目的範圍內對甲方之資料為蒐集、電腦處理、國際傳遞及利用本人之個人資料。並同意乙方得基於風險控管、稽核、客戶服務、管理、資訊提供、或為甲方之利益或依法令規定、或因主管機關、法院之要求將之提供與受乙方委託處理基金相關事務之人。</p>
+                            </li>   
+                            <li>電子交易系統資料保全
+                                <ol type="1">
+                                    <li>甲方不得竄改、修改或以任何方式變更乙方電子交易系統之任何部分，或進入乙方電子交易系統未經許可之部分。</li>
+                                    <li>乙方應盡力維護電子交易系統傳輸訊息之安全，防止他人非法進入系統、竊取、竄改或毀損交易紀錄及資料。</li>
+                                    <li>非可歸責於乙方之事由，包括但不限於因法令或主管機關之限制、交易市場規則、停止交易、戰爭、天災等，所致執行遲延或無法執行而造成本人之損害，乙方及其代理人、代表人、受僱人無須負責。</li>
+                                    <li>本人同意於使用電子交易系統時，如有任何連線上之問題，應主動嘗試以其他方式與乙方聯繫並將所面臨之問題立即通知乙方。</li>
+                                </ol>
+                            </li>
+                            <li>電子交易風險歸責
+                                <p>甲方使用乙方電子交易服務系統時，如有下述情形，應立即通知乙方，並配合辦理相關措施：</p>
+                                <ol type="1">
+                                    <li>乙方對於其處理甲方從事電子式交易之相關設備軟硬體，應盡善良管理人之注意義務。</li>
+                                    <li>甲方同意電子式交易型態在資料傳輸上有不穩定之風險，甲方同意如電子交易系統傳輸，因通訊斷線、斷電、網路壅塞或發生天然災害等不可抗力事由，致電子交易之時間遲延、執行時之價格與指示當時之價格不同或乙方無法接收或傳送，而影響交易之結果時，如該事由非可歸責於乙方，甲方須自負因此所生之風險。甲方如於乙方執行電子交易前欲更改原交易之內容，惟因通訊斷線、斷電、網路壅塞或發生天然災害等不可抗力事由，致乙方無法接收、傳送或即時更改者，如該事由非可歸責於乙方，乙方無須負責，且原電子交易之內容，對甲方仍發生效力。</li>
+                                    <li>非可歸責於乙方之事由，包括但不限於因法令或主管機關之限制、交易市場規則、停止交易、戰爭、天災等，所致執行遲延或無法執行而造成甲方之損害，乙方及其代理人、代表人、受僱人無須負責。</li>
+                                    <li>甲方同意於使用電子交易系統時，如有任何連線上之問題，應主動嘗試以其他方式與乙方聯繫並將所面臨之問題立即通知乙方。</li>
+                                </ol>
+                            </li>
+                            <li>交易紀錄
+                                  <p>甲方了解並同意，為保障雙方權益，乙方得自動監測或紀錄甲方與乙方間電子交易聯繫之內容，並得紀錄所有電子交易委託之內容。</p>
+                            </li>  
+                            <li>權利義務之轉讓
+                                  <p>甲方不得將本約定書之權利義務轉讓於任何他人。</p>
+                            <li>未盡事宜
+                                  <p>本約定書如有未盡事宜悉依甲方與乙方所簽署境外基金交易開戶約定書、證券投資信託及顧問法、境外基金管理辦法、中華民國證券投資信託暨顧問商業同業公會境外基金電子交易作業準則及中華民國相關法令、函釋之規定辦理，前述有修訂者依修訂後之規定辦理，就修訂部分本約定書視為亦已修訂，不須重新簽署。</p>
+                            </li>  
+                            <li>合約之終止
+                              <p>任一方得隨時以書面通知他方終止本約定書，該終止通知，對於接獲該通知前已執行之電子交易委託及雙方之權利義務，均不受影響。</p>
+                            </li> 
+                            <li>準據法與管轄法院
+                              <p>本約定書以中華民國法律為準據法，因本約定書所涉糾紛之處理方式，與境外基金交易開戶約定書相同。</p>
+                            </li> 
+                        </ol>
+                    </div><!-- /.box-body -->
+                    <div class="box-header bg-orange text-center">
+                        <h3 class="box-title">蒐集、處理及利用個人資料告知暨同意書</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <p>中菲電腦股份有限公司（以下稱本公司）依據個人資料保護法（以下稱個資法）第八條第一項規定，告知 台端之隱私權保護政策如下，請詳閱：，請詳閱：</p>
+                        <ol style="list-style-type:cjk-ideographic">
+                           <li>個資法授權、隱私權保護原則與保密措施
+                                <ol type="1">
+                                    <li>本公司經由以下合法及公平之方法對其個人資料之蒐集、處理及利用(台端得選擇是否提供相關個人資料，惟 台端若拒絕提供相關個人資料，本公司將無法進行必要之審核及相關處理作業，致無法提供 台端相關服務)：
+                                        <ol type="i">
+                                            <li>本公司及集保結算所得依個人資料保護法及相關法令規定，於本公司及集保結算所所取得執照或許可之特定目的範圍內，或為 台端之利益於特定目的範圍外，對 台端之個人資料為蒐集、處理、國際傳輸及利用。</li>
+                                            <li>台端得查詢及閱覽其個人資料。</li>
+                                            <li>本公司對 台端之資料應妥當保護，避免遺失或未經授權使用、銷毀、修改、再處理或公開。如該資料已逾法令規定之保存時限且無保存之必要時，應確實銷毀。</li>
+                                            <li>本公司對 台端所提供之資料負有保密義務，非因政府法令規定、主管機關要求或經 台端同意，本公司不得洩露 台端所提供之資料，包括因業務上所得知之資訊或具有機密價值之任何書面或非書面資料與任何第三人知悉，本合約終止後亦同。本公司取得 台端資料後，將依相關作業規範建檔並儲存於資料庫，同時嚴格控管 台端資料之存取，本公司及將採嚴格措施保護 台端之資料，並遵照相關法令，置有嚴密之防火牆及防毒系統以防止不法侵入及惡意程式之破壞。對資料之傳輸，除以安全加密的方式加以保護外，並依相關資料檔案管理措施，以保護資料安全。 台端資料如有變更，得隨時以書面、傳真或電話通知本公司予以修改。</li>
+                                        </ol>
+                                    </li>
+                                    <li>蒐集之目的
+                                        <ol type="1">
+                                            <li>經營獲目的事業主管機關許可及營業登記項目或章程所定之業務。</li>
+                                            <li>依法令規定及金融監理需要，依法定義務、依契約、類契約或其他法律關係等，所為個人資料之蒐集、處理及利用。</li>
+                                            <li>包含證券投資顧問業務、境外基金相關業務及其它經主管機關核淮項目之業務行為；與經營業務相關之行銷行為、客戶管理、其它金融業務管理、其他諮詢與顧問服務等、非公務機關依法定義務所進行個人資料之蒐集處理及利用，金融服務業依法令規定及金融監理需要所為之蒐集處理及利用。</li>
+                                        </ol>
+                                    </li>
+                                    <li>蒐集之個人資料類別
+                                        <p>包括姓名、出生年月日、身分證統一編號、護照號碼、家庭、職業、教育、婚姻、連絡方式、財產、職業、資格、收入所得、資產與投資等財務狀況，及後續其他合於本公司營業項目之特定目的所須蒐集之個人資料等。</p>
+                                    </li> 
+                                    <li>個人資料利用之期間、地區、對象及方式
+                                        <ol type="1">
+                                            <li>期間：個人資料蒐集之特定目的存續期間、依相關法令規定或契約約定之保存年限本公司因執行業務所必須之保存期間。</li>
+                                            <li>地區：中華民國、本公司海外分支機構所在地、本公司業務委外機構所在地、與本公司有業務往來之機構營業處所所在地等。</li>
+                                            <li>對象：本公司及本公司之分支機構、本公司之共同行銷或交互運用客戶資料之公司、本公司合作推廣之單位、其他與本公司有業務往來之機構、依法有調查權機關或金融監理機關等。</li>
+                                            <li>方式：以書面、電話、傳真、電子文件、網際網路或其他適當方式為蒐集、處理、利用與國際傳輸。</li>
+                                        </ol>
+                                    </li>
+                                    <li>依據個資法第三條規定，台端就本公司保有 台端之個人資料得行使下列權利
+                                        <ol type="1">
+                                            <li>得向本公司查詢、請求閱覽或請求製給複製本，而本公司依法得酌收必要成本費用。</li>
+                                            <li>得向本公司請求補充或更正，惟依法 台端應為適當之釋明。</li>
+                                            <li>得向本公司請求停止蒐集、處理或利用及請求刪除，惟依法本公司因執行業務所必須者，得不依 台端請求為之。</li>
+                                            <li>若 台端不欲接受本公司之行銷及行銷資料，請撥打服務總機(02) 8888-8888尋求相關協助。</li>
+                                        </ol>
+                                    </li>
+                                    <li> 經本公司向 台端告知上開事項、 台端已清楚瞭解本公司蒐集、處理或利用 台端個人資料之目的及用途。</li>
+                                </ol>
+                            </li>
+                        </ol>
+                        <div class="box-footer pull-right">
+                             <label style="font-size:larger;padding-right:20px"> 身份證字號 </label>
+                             <input  class="input-lg" type="text" placeholder="請輸入身份證字號">
+                             <button class="btn-lg btn-danger" type="submit"  onclick="window.location.href='AccountStep2.html'">我同意</button>
+                        </div>
+                    </div>
+                </div><!-- /.tab-content -->
+              </div><!-- nav-tabs-custom -->
+            </div><!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 8.8.8
+    </div>
+    <strong>Copyright &copy; 2015 <a href="http://www.ddsc.com.tw">中菲電腦股份有限公司</a>.</strong> All rights
+    reserved.
+  </footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+    <!-- Select2 -->
+    <script src="plugins/select2/select2.full.min.js"></script>
+    <!-- InputMask -->
+    <script src="plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <!-- date-range-picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- SlimScroll 1.3.0 -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="plugins/iCheck/icheck.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+
+
+<!-- jQuery 2.1.4 -->
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.5 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="plugins/morris/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/knob/jquery.knob.js"></script>
+<!-- daterangepicker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+    <!-- Page script -->
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $(".select2").select2();
+
+            //Datemask dd/mm/yyyy
+            $("#datemask").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
+            //Datemask2 mm/dd/yyyy
+            $("#datemask2").inputmask("mm/dd/yyyy", { "placeholder": "mm/dd/yyyy" });
+            //Money Euro
+            $("[data-mask]").inputmask();
+
+            //Date range picker
+            $('#reservation').daterangepicker();
+            //Date range picker with time picker
+            $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' });
+            //Date range as a button
+            $('#daterange-btn').daterangepicker(
+                {
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment()
+                },
+            function (start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+            );
+
+            //iCheck for checkbox and radio inputs
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            });
+            //Red color scheme for iCheck
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            });
+            //Flat red color scheme for iCheck
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
+
+            //Colorpicker
+            $(".my-colorpicker1").colorpicker();
+            //color picker with addon
+            $(".my-colorpicker2").colorpicker();
+
+            //Timepicker
+            $(".timepicker").timepicker({
+                showInputs: false
+            });
+        });
+    </script>
+</body>
+</html>
